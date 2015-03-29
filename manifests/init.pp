@@ -1,4 +1,9 @@
-# This is a placeholder class.
-class template {
-  anchor { 'Hello_World': }
+# Installs java6
+class java6 ($source) {
+  package { 'Java 6' :
+    ensure   => installed,
+    source   => "${source}",
+    provider => 'pkgdmg',
+  }
 }
+
